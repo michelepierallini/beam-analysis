@@ -17,7 +17,7 @@ This repository contains a simple scratch Python-based structural analysis tool 
 ### Project Initialization
 1. **Clone the repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/yursds/beam-analysis.git
    cd beam-analysis
    ```
 2. **Install dependencies using `uv`**:
