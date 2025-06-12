@@ -308,4 +308,5 @@ if __name__ == "__main__":
         beam.print_summary(material_name=material_name)
         beam.plot_results(suffix=f"{material_name}") # Uncomment to plot for each material    
     
+    plt.tight_layout()
     plt.show()
