@@ -28,7 +28,7 @@ This repository contains a simple scratch Python-based structural analysis tool 
 
 3. **Run the main script**:
    ```bash
-   uv run python beam_analysis.py
+   uv run python scripts/beam_analysis.py
    ```
    This will execute the example usage provided in the code.
 
