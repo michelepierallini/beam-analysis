@@ -6,13 +6,6 @@ import time
 plt.rcParams['text.latex.preamble'] = ''.join([r'\usepackage{siunitx}', r'\usepackage{amsmath}'])
 # np.warnings.filterwarnings('ignore', category=np.VisibleDeprecationWarning)
 
-# from fishing_rod_12_joints._inertia_matrix import _inertia_matrix  
-# from fishing_rod_12_joints._coriolis_matrix import _coriolis_matrix 
-# from fishing_rod_12_joints._gravity_matrix import _gravity_matrix 
-# from fishing_rod_12_joints._stiffness_torque import _stiffness_torque 
-# from fishing_rod_12_joints._p_tip import _p_tip
-# from fishing_rod_12_joints._damping_torque import _damping_torque
-# from fishing_rod_12_joints._jacobian_diff import _jacobian_diff
 
 from fishing_rod_12_joints_np._inertia_matrix_np import _inertia_matrix  
 from fishing_rod_12_joints_np._coriolis_matrix_np import _coriolis_matrix 
@@ -54,7 +47,6 @@ class DataRobot():
         self.x = np.concatenate([self.q, self.q_dot], dtype=np.float64)
         self.x_dot = np.concatenate([self.q_dot, self.q_ddot], dtype=np.float64)
         self.n = len(self.q) # state dimension 
-        henkel = self.henkel_matrix()
         self.scale = 1
 
         if C_y is None:
@@ -155,7 +147,6 @@ class DataRobot():
         return x_new
     
     def adaptiveEulerStep(self, x, u, dt):
-        ## Chat GPT variabe step integrator, modifying Euler (my function above eulerStep)
         # x = self.solveSingularityStatic(x)
         h = dt  # Initial step size
         t = 0.0  # Current time

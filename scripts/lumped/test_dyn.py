@@ -1,13 +1,5 @@
 import numpy as np
 
-# from fishing_rod_12_joints._inertia_matrix import _inertia_matrix  
-# from fishing_rod_12_joints._coriolis_matrix import _coriolis_matrix 
-# from fishing_rod_12_joints._gravity_matrix import _gravity_matrix 
-# from fishing_rod_12_joints._stiffness_torque import _stiffness_torque 
-# from fishing_rod_12_joints._p_tip import _p_tip
-# from fishing_rod_12_joints._damping_torque import _damping_torque
-# from fishing_rod_12_joints._jacobian_diff import _jacobian_diff
-
 from fishing_rod_12_joints_np._inertia_matrix_np import _inertia_matrix  
 from fishing_rod_12_joints_np._coriolis_matrix_np import _coriolis_matrix 
 from fishing_rod_12_joints_np._gravity_matrix_np import _gravity_matrix 
@@ -46,13 +38,13 @@ if __name__ == '__main__':
     J = _jacobian_diff(q, L)
     print('=============================================================================================================')
     # print('Tendon Matrix Lin:\n',Alin, np.shape(Alin))
-    print('Tendon Matrix:\n', A, np.shape(A))
-    print('Inertial:\n', M, np.shape(M))
-    print('Coriolis:\n', C, np.shape(C))
-    print('Damping:\n', D, np.shape(D))
-    print('Stifnness:\n', K, np.shape(K))
-    print('Gravity:\n', G, np.shape(G))
-    print('Jacobian Pos:\n', J, np.shape(J))
+    print('Tendon Matrix :\n', A, np.shape(A))
+    print('Inertial      :\n', M, np.shape(M))
+    print('Coriolis      :\n', C, np.shape(C))
+    print('Damping       :\n', D, np.shape(D))
+    print('Stifnness     :\n', K, np.shape(K))
+    print('Gravity       :\n', G, np.shape(G))
+    print('Jacobian Pos  :\n', J, np.shape(J))
     print('=============================================================================================================')
     print('=============================================================================================================')
-    print('Forward Kine:\n', pos, np.shape(pos))
+    print('Forward Kine :\n', pos, np.shape(pos))
