@@ -31,15 +31,15 @@ The model is heredidate from the classic rigid body formulation adjointed with s
 
 `python run_dyn_control_fl.py`
 
-## Typical Workflow
+## Workflow
 
-1. **Symbolic Model Generation**  
+1. **Generation**  
    Use [`get_dynamics.ipynb`](get_dynamics.ipynb) to derive and export Python functions for the dynamic model (inertia, Coriolis, gravity, etc.) for a specified number of segments.
 
-2. **Simulation Setup**  
+2. **Configure**  
    Configure model parameters in [`CONST.py`](CONST.py) and initialize the robot model using [`Fishing_class.py`](Fishing_class.py).
 
-3. **Run Simulations**  
+3. **Simulations**  
    Use [`run_dyn_control_fl.py`](run_dyn_control_fl.py) or custom scripts to simulate the system, apply controls, and analyze results.
 
 
